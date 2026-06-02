@@ -33,17 +33,16 @@ private:
   static bool isFloatLiteral(std::string const &literal);
   static bool isDoubleLiteral(std::string const &literal);
   static bool isPseudoLiteral(std::string const &literal);
+  static bool fitsInInt(double value);
+  static bool isWhole(double value);
 
-  static void convertFromChar(char c);
-  static void convertFromInt(long value);
-  static void convertFromFloat(float value);
-  static void convertFromDouble(double value);
   static void convertPseudo(std::string const &literal);
+  static void convertAll(double value);
 
-  static void printChar(double value, bool isPseudo);
-  static void printInt(double value, bool isPseudo);
-  static void printFloat(double value, bool isPseudo);
-  static void printDouble(double value, bool isPseudo);
+  static void printChar(double value);
+  static void printInt(double value);
+  static void printFloat(double value);
+  static void printDouble(double value);
 
 public:
   static void convert(std::string const &literal);
